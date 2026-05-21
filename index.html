@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Dual Software | Soluções em IA Generativa</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="./js/tailwind.config.js"></script>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=Montserrat:wght@200;600&amp;family=Space+Grotesk:wght@400;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+
+    <link href="./css/styles.css" rel="stylesheet">
+
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body
+    class="bg-background text-on-background antialiased selection:bg-primary selection:text-on-primary min-h-screen flex flex-col font-body-md overflow-x-hidden">
+    <!-- Header / TopNavBar -->
+    <header
+        class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-white/10 transition-transform duration-300"
+        id="main-header">
+        <nav
+            class="flex justify-between items-center px-4 md:px-margin-desktop py-base max-w-container-max mx-auto h-[80px]">
+            <a class="flex items-center gap-3" href="#">
+                <img alt="Dual Software Logo" class="h-10 w-10 object-contain" src="./assets/brand/icone.svg">
+                <div class="logo-montserrat text-on-background flex flex-col leading-none">
+                    <span class="logo-dual text-lg">DUAL</span>
+                    <span class="logo-software text-[0.6rem]">SOFTWARE</span>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300"
+                    href="#">Inicio</a>
+                <a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300"
+                    href="#problema">Problema</a>
+                <a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300"
+                    href="#abordagem">Abordagem</a>
+                <a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300"
+                    href="#solucoes">Soluções</a>
+            </div>
+            <a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-label-caps uppercase transition-all duration-300 active:scale-95 hover:bg-primary-fixed-dim hover:shadow-[0_0_15px_rgba(212,240,0,0.3)]"
+                href="https://wa.me/5516994524400?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Dual%20Software.%20Gostaria%20de%20entender%20como%20voc%C3%AAs%20constroem%20ferramentas%20de%20IA%20de%20forma%20r%C3%A1pida%20e%20sem%20ru%C3%ADdo%20para%20o%20meu%20neg%C3%B3cio."
+                target="_blank" rel="noopener noreferrer">
+                Entrar em Contato
+            </a>
+            <!-- Mobile: WhatsApp icon + hamburger -->
+            <div class="flex items-center gap-3 md:hidden">
+                <a href="https://wa.me/5516994524400?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Dual%20Software.%20Gostaria%20de%20entender%20como%20voc%C3%AAs%20constroem%20ferramentas%20de%20IA%20de%20forma%20r%C3%A1pida%20e%20sem%20ru%C3%ADdo%20para%20o%20meu%20neg%C3%B3cio."
+                    target="_blank" rel="noopener noreferrer"
+                    class="w-10 h-10 flex items-center justify-center bg-primary text-on-primary transition-all duration-300 active:scale-95 hover:bg-primary-fixed-dim"
+                    aria-label="WhatsApp">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                </a>
+                <button id="mobile-menu-btn"
+                    class="w-10 h-10 flex items-center justify-center border border-white/20 text-on-background transition-colors hover:border-primary hover:text-primary"
+                    aria-label="Abrir menu">
+                    <span class="material-symbols-outlined" id="mobile-menu-icon">menu</span>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile dropdown menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-background border-b border-white/10">
+            <nav class="flex flex-col px-4 py-2 max-w-container-max mx-auto">
+                <a class="py-4 px-2 text-on-surface-variant font-medium hover:text-primary border-b border-white/5 transition-colors duration-200"
+                    href="#">Início</a>
+                <a class="py-4 px-2 text-on-surface-variant font-medium hover:text-primary border-b border-white/5 transition-colors duration-200"
+                    href="#problema">Problema</a>
+                <a class="py-4 px-2 text-on-surface-variant font-medium hover:text-primary border-b border-white/5 transition-colors duration-200"
+                    href="#abordagem">Abordagem</a>
+                <a class="py-4 px-2 text-on-surface-variant font-medium hover:text-primary border-b border-white/5 transition-colors duration-200"
+                    href="#solucoes">Soluções</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-[80px]">
+        <!-- 1. Hero Section -->
+        <section
+            class="relative min-h-[90vh] flex items-center justify-center px-margin-desktop py-24 bg-grid overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-background pointer-events-none"></div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary rounded-full opacity-[0.03] blur-[100px] pointer-events-none animate-pulse-slow">
+            </div>
+            <div class="relative z-10 max-w-4xl mx-auto text-center space-y-8">
+                <div
+                    class="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/40 bg-surface-dark-grey text-primary font-label-caps uppercase text-sm mb-4">
+                    <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    Sistemas Inteligentes<br class="sm:hidden"> sob medida
+                </div>
+                <h1
+                    class="reveal stagger-1 font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background">
+                    Construa rápido.<br>
+                    Escale com inteligência.<br>
+                    <span class="text-primary text-glow">Entregue valor real.</span>
+                </h1>
+                <p class="reveal stagger-2 font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Desenvolvemos ferramentas de IA generativa sob medida para resolver problemas complexos de negócio.
+                    Sem ruído, apenas sistemas que funcionam.
+                </p>
+                <div class="reveal stagger-3 flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+                    <a class="w-full sm:w-auto px-8 py-4 bg-primary text-on-primary font-label-caps uppercase transition-all duration-300 active:scale-95 hover:bg-primary-fixed-dim hover:shadow-[0_0_20px_rgba(212,240,0,0.4)] text-center"
+                        href="https://wa.me/5516994524400?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consultoria%20diagn%C3%B3stica%20para%20descobrir%20onde%20a%20IA%20pode%20reduzir%20meus%20custos%20e%20aumentar%20minha%20efici%C3%AAncia."
+                        target="_blank" rel="noopener noreferrer">
+                        Agendar Consultoria Diagnóstica
+                    </a>
+                    <a class="w-full sm:w-auto px-8 py-4 border border-white/20 text-on-background font-label-caps uppercase transition-colors hover:border-primary hover:text-primary text-center"
+                        href="#solucoes">
+                        Ver Soluções Customizadas
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. A Seção do Problema -->
+        <section class="py-32 px-margin-desktop bg-surface-container-lowest border-t border-white/5" id="problema">
+            <div class="max-w-container-max mx-auto">
+                <div class="mb-16 reveal">
+                    <h2 class="font-headline-lg text-headline-lg text-on-background text-glow">O que existe por aí.</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-xl">O mercado está saturado
+                        de promessas. Nós olhamos para a realidade operacional.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                        class="reveal stagger-1 group border border-white/10 bg-surface-dark-grey p-8 transition-all duration-300 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_10px_30px_-15px_rgba(212,240,0,0.1)] flex flex-col h-full">
+                        <div
+                            class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg border border-white/5 mb-6 group-hover:bg-primary/10 group-hover:scale-110 transition-all duration-300">
+                            <span
+                                class="material-symbols-outlined text-primary text-2xl group-hover:rotate-12 transition-transform">speed</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-on-background mb-4">Velocidade sem estrutura
+                        </h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Muitas empresas adotam ferramentas
+                            de IA aleatórias que geram caos, não processos consolidados.</p>
+                    </div>
+                    <div
+                        class="reveal stagger-2 group border border-white/10 bg-surface-dark-grey p-8 transition-all duration-300 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_10px_30px_-15px_rgba(212,240,0,0.1)] flex flex-col h-full">
+                        <div
+                            class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg border border-white/5 mb-6 group-hover:bg-primary/10 group-hover:scale-110 transition-all duration-300">
+                            <span
+                                class="material-symbols-outlined text-primary text-2xl group-hover:-rotate-12 transition-transform">extension_off</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-on-background mb-4">Ferramentas vs.
+                            Necessidades</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Assinar 10 ferramentas cria
+                            complexidade, não momento. Você precisa de soluções que se moldem ao seu fluxo.</p>
+                    </div>
+                    <div
+                        class="reveal stagger-3 group border border-white/10 bg-surface-dark-grey p-8 transition-all duration-300 hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_10px_30px_-15px_rgba(212,240,0,0.1)] flex flex-col h-full">
+                        <div
+                            class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg border border-white/5 mb-6 group-hover:bg-primary/10 group-hover:scale-110 transition-all duration-300">
+                            <span
+                                class="material-symbols-outlined text-primary text-2xl group-hover:rotate-12 transition-transform">visibility_off</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-on-background mb-4">Falta de Clareza</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">O ruído sobre IA é alto; o valor
+                            real é escasso. Nós focamos na clareza do dado e no ganho de eficiência tangível.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. A Abordagem Dual -->
+        <section class="py-32 px-margin-desktop border-t border-white/5 relative overflow-hidden" id="abordagem">
+            <div
+                class="absolute right-0 top-1/4 w-[600px] h-[600px] bg-primary rounded-full opacity-[0.02] blur-[120px] pointer-events-none">
+            </div>
+            <div class="max-w-container-max mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                    <div class="reveal">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-surface-dark-grey text-primary font-code text-xs uppercase mb-6">
+                            Metodologia
+                        </div>
+                        <h2
+                            class="font-display-lg-mobile md:font-headline-lg text-display-lg-mobile md:text-headline-lg text-on-background mb-8">
+                            A Abordagem Dual</h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Sistemas que não são apenas
+                            complementos, mas o coração da operação desenvolvidos com foco em métricas claras de
+                            negócio.</p>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant">Para nós, IA não se resume a um
+                            simples chatbot. Criamos ferramentas inteligentes que utilizam modelos avançados nos
+                            bastidores para otimizar processos, automatizar tarefas e gerar ganhos reais de eficiência.
+                            O resultado é mais autonomia, consistência operacional e desempenho contínuo.</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div
+                            class="reveal stagger-1 flex gap-6 p-6 border border-white/10 bg-surface-dark-grey group hover:border-primary/30 transition-all duration-300 hover:translate-x-2">
+                            <div
+                                class="font-code text-primary mt-1 opacity-50 group-hover:opacity-100 transition-opacity">
+                                01</div>
+                            <div>
+                                <h4
+                                    class="font-headline-md text-lg font-bold text-on-background mb-2 group-hover:text-primary transition-colors">
+                                    Diagnóstico de Maturidade</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Antes de codar, avaliamos
+                                    onde sua empresa está na jornada de IA (Cultura, Educação ou Automação).</p>
+                            </div>
+                        </div>
+                        <div
+                            class="reveal stagger-2 flex gap-6 p-6 border border-white/10 bg-surface-dark-grey group hover:border-primary/30 transition-all duration-300 hover:translate-x-2">
+                            <div
+                                class="font-code text-primary mt-1 opacity-50 group-hover:opacity-100 transition-opacity">
+                                02</div>
+                            <div>
+                                <h4
+                                    class="font-headline-md text-lg font-bold text-on-background mb-2 group-hover:text-primary transition-colors">
+                                    Desenvolvimento Sob Demanda</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Criamos ferramentas (LLMs,
+                                    Agentes) focadas em: Redução de Custo, Aumento de Faturamento e Eficiência.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="reveal stagger-3 flex gap-6 p-6 border border-white/10 bg-surface-dark-grey group hover:border-primary/30 transition-all duration-300 hover:translate-x-2">
+                            <div
+                                class="font-code text-primary mt-1 opacity-50 group-hover:opacity-100 transition-opacity">
+                                03</div>
+                            <div>
+                                <h4
+                                    class="font-headline-md text-lg font-bold text-on-background mb-2 group-hover:text-primary transition-colors">
+                                    Filosofia "IA First"</h4>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Implementamos sistemas que
+                                    são integrados ao DNA do negócio, não penduricalhos tecnológicos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Áreas de Especialidade (Bento Grid) -->
+        <section class="py-32 px-margin-desktop bg-surface-container-lowest border-t border-white/5" id="solucoes">
+            <div class="max-w-container-max mx-auto">
+                <div class="mb-16 reveal">
+                    <h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Áreas de Especialidade</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Quick wins para áreas vitais
+                        do seu negócio.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[250px]">
+                    <div
+                        class="reveal stagger-1 lg:col-span-2 spec-card border border-white/10 bg-surface-dark-grey p-8 relative overflow-hidden group hover:border-primary/40">
+                        <div
+                            class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
+                            <span
+                                class="material-symbols-outlined text-[100px] text-primary">settings_applications</span>
+                        </div>
+                        <div class="relative z-10 h-full flex flex-col justify-end">
+                            <h3
+                                class="font-headline-md text-headline-md text-on-background mb-3 group-hover:text-primary transition-colors">
+                                Operações e Gestão</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Automação de tarefas
+                                repetitivas e leitura inteligente de relatórios complexos em segundos.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="reveal stagger-2 spec-card border border-white/10 bg-surface-dark-grey p-8 relative overflow-hidden group hover:border-primary/40">
+                        <div
+                            class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-6">
+                            <span class="material-symbols-outlined text-[80px] text-primary">group</span>
+                        </div>
+                        <div class="relative z-10 h-full flex flex-col justify-end">
+                            <h3
+                                class="font-headline-md text-headline-md text-on-background text-xl mb-3 group-hover:text-primary transition-colors">
+                                RH e Cultura</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant text-sm">Agentes para análise de
+                                currículos e elaboração de planos de desenvolvimento (PDI/PDL).</p>
+                        </div>
+                    </div>
+                    <div
+                        class="reveal stagger-1 spec-card border border-white/10 bg-surface-dark-grey p-8 relative overflow-hidden group hover:border-primary/40">
+                        <div
+                            class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
+                            <span class="material-symbols-outlined text-[80px] text-primary">campaign</span>
+                        </div>
+                        <div class="relative z-10 h-full flex flex-col justify-end">
+                            <h3
+                                class="font-headline-md text-headline-md text-on-background text-xl mb-3 group-hover:text-primary transition-colors">
+                                Vendas e Marketing</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant text-sm">Geração de anúncios de
+                                alta conversão e roteiros narrados em escala.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="reveal stagger-2 lg:col-span-2 spec-card border border-white/10 bg-surface-dark-grey p-8 relative overflow-hidden group hover:border-primary/40">
+                        <div
+                            class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-6">
+                            <span class="material-symbols-outlined text-[100px] text-primary">support_agent</span>
+                        </div>
+                        <div class="relative z-10 h-full flex flex-col justify-end">
+                            <h3
+                                class="font-headline-md text-headline-md text-on-background mb-3 group-hover:text-primary transition-colors">
+                                Atendimento</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant max-w-md">IA como primeiro
+                                filtro de suporte 24/7, garantindo resolução rápida com tom de voz humanizado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee de marcas IA (conteúdo renderizado por js/main.js) -->
+        <section class="px-margin-desktop bg-background border-t border-white/5 overflow-hidden py-8 relative"
+            id="ferramentas-integradas">
+            <div
+                class="absolute left-0 top-0 bottom-0 w-48 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none">
+            </div>
+            <div
+                class="absolute right-0 top-0 bottom-0 w-48 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none">
+            </div>
+            <div class="max-w-container-max mx-auto">
+                <div class="reveal stagger-1 marquee-container">
+                    <div class="animate-marquee" id="brand-marquee"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Como Trabalhamos (Camadas) -->
+        <section class="py-32 px-margin-desktop border-t border-white/5" id="arquitetura">
+            <div class="max-w-container-max mx-auto text-center">
+                <h2 class="reveal font-headline-lg text-headline-lg text-on-background mb-16">Arquitetura de
+                    Entrega</h2>
+                <div class="flex flex-col md:flex-row justify-center items-stretch gap-2 relative">
+                    <div
+                        class="hidden md:block absolute top-1/2 left-[10%] right-[10%] h-[2px] bg-white/5 -translate-y-1/2 z-0">
+                        <div class="connect-line h-full bg-gradient-to-r from-primary/10 via-primary to-primary/10 w-0">
+                        </div>
+                    </div>
+                    <div
+                        class="reveal stagger-1 flex-1 border border-white/10 bg-surface-dark-grey p-8 py-12 relative group hover:border-primary/30 transition-all duration-300 z-10 hover:-translate-y-2">
+                        <div
+                            class="w-10 h-10 bg-surface-container-highest rounded flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors duration-300 group-hover:scale-110">
+                            <span class="material-symbols-outlined text-primary">database</span>
+                        </div>
+                        <h4
+                            class="font-headline-md text-lg font-bold text-on-background mb-3 group-hover:text-primary transition-colors">
+                            Camada de Dados</h4>
+                        <p class="font-body-md text-sm text-on-surface-variant">Estruturamos seus dados dispersos e
+                            aplicamos governança para serem consumidos pela IA.</p>
+                    </div>
+                    <div class="hidden md:flex items-center text-white/20 z-10">
+                        <span class="material-symbols-outlined bg-background px-2">arrow_forward</span>
+                    </div>
+                    <div
+                        class="reveal stagger-2 flex-1 border border-white/10 bg-surface-dark-grey p-8 py-12 relative group hover:border-primary/30 transition-all duration-300 z-10 hover:-translate-y-2">
+                        <div
+                            class="w-10 h-10 bg-surface-container-highest rounded flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors duration-300 group-hover:scale-110">
+                            <span class="material-symbols-outlined text-primary">psychology</span>
+                        </div>
+                        <h4
+                            class="font-headline-md text-lg font-bold text-on-background mb-3 group-hover:text-primary transition-colors">
+                            Camada de Inteligência</h4>
+                        <p class="font-body-md text-sm text-on-surface-variant">Aplicamos modelos generativos e LLMs
+                            ajustados para extrair padrões e contexto preciso.</p>
+                    </div>
+                    <div class="hidden md:flex items-center text-white/20 z-10">
+                        <span class="material-symbols-outlined bg-background px-2">arrow_forward</span>
+                    </div>
+                    <div
+                        class="reveal stagger-3 flex-1 border border-primary/40 bg-surface-dark-grey p-8 py-12 relative shadow-[0_0_30px_rgba(212,240,0,0.05)] group hover:border-primary/80 transition-all duration-300 z-10 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(212,240,0,0.15)]">
+                        <div
+                            class="w-10 h-10 bg-primary/20 rounded flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <span class="material-symbols-outlined text-primary">terminal</span>
+                        </div>
+                        <h4
+                            class="font-headline-md text-lg font-bold text-on-background mb-3 group-hover:text-primary transition-colors text-glow">
+                            Camada de Produto</h4>
+                        <p class="font-body-md text-sm text-on-surface-variant">Entregamos a ferramenta final
+                            customizada (App, Dashboard ou API) pronta para uso pela equipe.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CTA Final -->
+        <section class="py-40 px-margin-desktop bg-background border-t border-white/5 relative overflow-hidden"
+            id="diagnostico">
+            <div class="absolute inset-0 bg-grid opacity-50 pointer-events-none"></div>
+            <div
+                class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary rounded-t-full opacity-[0.05] blur-[100px] pointer-events-none animate-pulse-slow">
+            </div>
+            <div class="relative z-10 max-w-3xl mx-auto text-center reveal">
+                <h2
+                    class="font-display-lg-mobile md:font-headline-lg text-display-lg-mobile md:text-headline-lg text-on-background mb-8">
+                    Nunca mais pergunte qual ferramenta de IA usar.
+                    <span class="text-primary block mt-2 text-glow">Pergunte-nos onde a IA pode escalar seu
+                        resultado.</span>
+                </h2>
+                <div class="mt-12 flex justify-center">
+                    <a href="https://wa.me/5516994524400?text=Ol%C3%A1%21%20Quero%20realizar%20meu%20Diagn%C3%B3stico%20de%20IA%20para%20identificar%20meu%20n%C3%ADvel%20de%20maturidade%20e%20descobrir%20como%20escalar%20meus%20resultados%20com%20ferramentas%20sob%20medida."
+                        target="_blank" rel="noopener noreferrer"
+                        class="px-10 py-5 bg-primary text-on-primary font-label-caps uppercase text-lg transition-all duration-300 active:scale-95 hover:bg-primary-fixed-dim shadow-[0_0_40px_rgba(212,240,0,0.2)] hover:shadow-[0_0_60px_rgba(212,240,0,0.4)] hover:-translate-y-1 inline-block">
+                        Realizar Meu Diagnóstico de IA
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contato -->
+    <section class="py-24 px-margin-desktop bg-surface-container-lowest border-t border-white/5" id="contato">
+        <div class="max-w-container-max mx-auto">
+            <div class="reveal text-center mb-12">
+                <h2 class="font-headline-lg text-headline-lg text-on-background mb-3">Fale com a gente</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant">Escolha o canal de sua preferência e
+                    responderemos rapidamente.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="https://wa.me/5516994524400?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Dual%20Software.%20Gostaria%20de%20entender%20como%20voc%C3%AAs%20constroem%20ferramentas%20de%20IA%20de%20forma%20r%C3%A1pida%20e%20sem%20ru%C3%ADdo%20para%20o%20meu%20neg%C3%B3cio."
+                    target="_blank" rel="noopener noreferrer"
+                    class="reveal stagger-1 group flex items-center gap-5 px-8 py-6 border border-white/10 bg-surface-dark-grey hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_10px_30px_-15px_rgba(212,240,0,0.15)] transition-all duration-300 min-w-[260px]">
+                    <div
+                        class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-surface-container rounded-lg border border-white/5 group-hover:bg-primary/10 group-hover:scale-110 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary fill-current"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-label-caps text-xs uppercase text-on-surface-variant mb-1 tracking-wider">
+                            WhatsApp</p>
+                        <p
+                            class="font-headline-md text-base font-semibold text-on-background group-hover:text-primary transition-colors">
+                            +55 16 99452-4400</p>
+                    </div>
+                </a>
+                <a href="mailto:ruan@dualsoftware.com.br"
+                    class="reveal stagger-2 group flex items-center gap-5 px-8 py-6 border border-white/10 bg-surface-dark-grey hover:border-primary/40 hover:-translate-y-1 hover:shadow-[0_10px_30px_-15px_rgba(212,240,0,0.15)] transition-all duration-300 min-w-[260px]">
+                    <div
+                        class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-surface-container rounded-lg border border-white/5 group-hover:bg-primary/10 group-hover:scale-110 transition-all duration-300">
+                        <span class="material-symbols-outlined text-primary text-2xl">mail</span>
+                    </div>
+                    <div>
+                        <p class="font-label-caps text-xs uppercase text-on-surface-variant mb-1 tracking-wider">E-mail
+                        </p>
+                        <p
+                            class="font-headline-md text-base font-semibold text-on-background group-hover:text-primary transition-colors break-all">
+                            ruan@dualsoftware.com.br</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-white/10">
+        <div
+            class="w-full py-16 grid md:grid-cols-3 items-center px-margin-desktop max-w-container-max mx-auto gap-y-4">
+            <div class="flex items-center gap-3 opacity-80 hover:opacity-100 transition-opacity">
+                <img alt="Dual Software Logo" class="h-8 w-8 object-contain" src="./assets/brand/icone.svg">
+                <div class="logo-montserrat text-on-background flex flex-col leading-none">
+                    <span class="logo-dual text-lg text-primary">DUAL</span>
+                    <span class="logo-software text-[0.6rem]">SOFTWARE</span>
+                </div>
+            </div>
+            <p
+                class="font-body-md text-body-md text-on-secondary-container text-sm text-center col-start-2 justify-self-center">
+                © 2026 Dual Software. Sem enrolação, apenas resultados.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
