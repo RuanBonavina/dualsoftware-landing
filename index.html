@@ -36,7 +36,6 @@
                 <img alt="Dual Software Logo" class="h-10 w-10 object-contain" src="./assets/brand/icone.svg">
                 <div class="logo-montserrat text-on-background flex flex-col leading-none">
                     <span class="logo-dual text-lg">dual software</span>
-                    <!-- <span class="logo-software text-[0.6rem]">SOFTWARE</span> -->
                 </div>
             </a>
             <div class="hidden md:flex items-center gap-8">
@@ -90,7 +89,7 @@
     <main class="flex-grow pt-[80px]">
         <!-- 1. Hero Section -->
         <section
-            class="relative min-h-[90vh] flex items-center justify-center px-margin-desktop py-24 bg-grid overflow-hidden">
+            class="relative min-h-[90vh] flex items-center justify-center px-8 md:px-margin-desktop py-24 bg-grid overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-b from-transparent to-background pointer-events-none"></div>
             <div
                 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary rounded-full opacity-[0.03] blur-[100px] pointer-events-none animate-pulse-slow">
@@ -126,7 +125,8 @@
         </section>
 
         <!-- 2. A Seção do Problema -->
-        <section class="py-32 px-margin-desktop bg-surface-container-lowest border-t border-white/5" id="problema">
+        <section class="py-32 px-8 md:px-margin-desktop bg-surface-container-lowest border-t border-white/5"
+            id="problema">
             <div class="max-w-container-max mx-auto">
                 <div class="mb-16 reveal">
                     <h2 class="font-headline-lg text-headline-lg text-on-background text-glow">O que existe por aí.</h2>
@@ -174,7 +174,8 @@
         </section>
 
         <!-- 3. A Abordagem Dual -->
-        <section class="py-32 px-margin-desktop border-t border-white/5 relative overflow-hidden" id="abordagem">
+        <section class="py-32 px-8 md:px-margin-desktop border-t border-white/5 relative overflow-hidden"
+            id="abordagem">
             <div
                 class="absolute right-0 top-1/4 w-[600px] h-[600px] bg-primary rounded-full opacity-[0.02] blur-[120px] pointer-events-none">
             </div>
@@ -242,7 +243,8 @@
         </section>
 
         <!-- 4. Áreas de Especialidade (Bento Grid) -->
-        <section class="py-32 px-margin-desktop bg-surface-container-lowest border-t border-white/5" id="solucoes">
+        <section class="py-32 px-8 md:px-margin-desktop bg-surface-container-lowest border-t border-white/5"
+            id="solucoes">
             <div class="max-w-container-max mx-auto">
                 <div class="mb-16 reveal">
                     <h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Áreas de Especialidade</h2>
@@ -312,7 +314,7 @@
         </section>
 
         <!-- Marquee de marcas IA (conteúdo renderizado por js/main.js) -->
-        <section class="px-margin-desktop bg-background border-t border-white/5 overflow-hidden py-8 relative"
+        <section class="px-8 md:px-margin-desktop bg-background border-t border-white/5 overflow-hidden py-8 relative"
             id="ferramentas-integradas">
             <div
                 class="absolute left-0 top-0 bottom-0 w-48 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none">
@@ -328,7 +330,7 @@
         </section>
 
         <!-- 5. Como Trabalhamos (Camadas) -->
-        <section class="py-32 px-margin-desktop border-t border-white/5" id="arquitetura">
+        <section class="py-32 px-8 md:px-margin-desktop border-t border-white/5" id="arquitetura">
             <div class="max-w-container-max mx-auto text-center">
                 <h2 class="reveal font-headline-lg text-headline-lg text-on-background mb-16">Arquitetura de
                     Entrega</h2>
@@ -385,7 +387,7 @@
         </section>
 
         <!-- 7. CTA Final -->
-        <section class="py-40 px-margin-desktop bg-background border-t border-white/5 relative overflow-hidden"
+        <section class="py-40 px-8 md:px-margin-desktop bg-background border-t border-white/5 relative overflow-hidden"
             id="diagnostico">
             <div class="absolute inset-0 bg-grid opacity-50 pointer-events-none"></div>
             <div
@@ -402,7 +404,7 @@
                     <a href="https://wa.me/5516994524400?text=Ol%C3%A1%21%20Quero%20realizar%20meu%20Diagn%C3%B3stico%20de%20IA%20para%20identificar%20meu%20n%C3%ADvel%20de%20maturidade%20e%20descobrir%20como%20escalar%20meus%20resultados%20com%20ferramentas%20sob%20medida."
                         target="_blank" rel="noopener noreferrer"
                         class="px-10 py-5 bg-primary text-on-primary font-label-caps uppercase text-lg transition-all duration-300 active:scale-95 hover:bg-primary-fixed-dim shadow-[0_0_40px_rgba(212,240,0,0.2)] hover:shadow-[0_0_60px_rgba(212,240,0,0.4)] hover:-translate-y-1 inline-block">
-                        Realizar Meu Diagnóstico de IA
+                        Realizar Meu <br class="sm:hidden">Diagnóstico de IA
                     </a>
                 </div>
             </div>
@@ -410,7 +412,7 @@
     </main>
 
     <!-- Contato -->
-    <section class="py-24 px-margin-desktop bg-surface-container-lowest border-t border-white/5" id="contato">
+    <section class="py-24 px-8 md:px-margin-desktop bg-surface-container-lowest border-t border-white/5" id="contato">
         <div class="max-w-container-max mx-auto">
             <div class="reveal text-center mb-12">
                 <h2 class="font-headline-lg text-headline-lg text-on-background mb-3">Fale com a gente</h2>
@@ -458,17 +460,16 @@
     <!-- Footer -->
     <footer class="bg-surface-container-lowest border-t border-white/10">
         <div
-            class="w-full py-16 grid md:grid-cols-3 items-center px-margin-desktop max-w-container-max mx-auto gap-y-4">
+            class="w-full py-16 grid md:grid-cols-3 items-center px-8 md:px-margin-desktop max-w-container-max mx-auto gap-y-4">
             <div class="flex items-center gap-3 opacity-80 hover:opacity-100 transition-opacity">
                 <img alt="Dual Software Logo" class="h-8 w-8 object-contain" src="./assets/brand/icone.svg">
                 <div class="logo-montserrat text-on-background flex flex-col leading-none">
                     <span class="logo-dual text-lg text-primary">DUAL</span>
-                    <!-- <span class="logo-software text-[0.6rem]">SOFTWARE</span> -->
                 </div>
             </div>
             <p
-                class="font-body-md text-body-md text-on-secondary-container text-sm text-center col-start-2 justify-self-center">
-                © 2026 Dual Software. Sem enrolação, apenas resultados.
+                class="font-body-md text-body-md text-on-secondary-container text-sm text-center col-start-2 justify-self-center px-1">
+                © 2026 Dual Software.<br class="sm:hidden"> Sem enrolação, apenas resultados.
             </p>
         </div>
     </footer>
